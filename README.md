@@ -18,24 +18,31 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on OSINT that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on OSINT that should be visited. Possible fields are:
 
-| Field                | Type    | Description                                                                                                                                                                                                    |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| searchKeywords               | Array  | (required) Keyword array that you want to search on the websites.                                                                                                                                                       |
-| codepad       | Boolean | (optional) This will enable the `codepad` module which will going to scrape http://codepad.org/. |
-| dumpz       | Boolean | (optional) This will enable the `dumpz` module which will going to scrape https://dumpz.org/. |
-| githubgist       | Boolean | (optional) This will enable the `Github Gist` module which will going to scrape https://gist.github.com/. |
-| ideone       | Boolean | (optional) This will enable the `ideone` module which will going to scrape https://ideone.com/. |
-| pastebin       | Boolean | (optional) This will enable the `pastebin` module which will going to scrape https://pastebin.com/. |
-| pasteorg       | Boolean | (optional) This will enable the `pasteorg` module which will going to scrape https://www.paste.org/. |
-| textbin       | Boolean | (optional) This will enable the `textbin` module which will going to scrape https://textbin.net/. |
-| proxy                | Object  | Proxy configuration                                                                                                                                                                                            |
-| extendOutputFunction | String  | (optional) Function that takes a JQuery handle ($) as argument and returns object with data                                                                                                                    |
+- `searchKeywords`: (Required) (String) Keyword array that you want to search on the websites.
+
+- `codepad`: (Optional) (Boolean) This will enable the `codepad` module which will going to scrape http://codepad.org/.
+
+- `dumpz`: (Optional) (Boolean) This will enable the `dumpz` module which will going to scrape https://dumpz.org/.
+
+- `githubgist`: (Optional) (Boolean) This will enable the `Github Gist` module which will going to scrape https://gist.github.com/.
+
+- `ideone`: (Optional) (Boolean) This will enable the `ideone` module which will going to scrape https://ideone.com/.
+
+- `pastebin`: (Optional) (Boolean) This will enable the `pastebin` module which will going to scrape https://pastebin.com/.
+
+- `pasteorg`: (Optional) (Boolean) This will enable the `pasteorg` module which will going to scrape https://www.paste.org/.
+
+- `textbin`: (Optional) (Boolean) This will enable the `textbin` module which will going to scrape https://textbin.net/.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
+
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
-##### Tip
+### Tip
 
 When you want to have a scrape only couple of modules, you can set `true` on the module flags and the actor will initiate to scrape only these websites.
 
